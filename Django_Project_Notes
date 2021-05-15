@@ -55,3 +55,18 @@ Set-up Autentication.
     ACCOUNT_USERNAME_MIN_LENGTH = 4
     LOGIN_URL = '/accounts/login/'
     LOGIN_REDIRECT_URL = '/'
+
+8. Test the set-up. Run the server.
+    Navigate to /accounts/login. 
+
+9. To confirm the super user e-mail set-up earlier, caccess it under the Admin section. 
+        Set to Promary & Confirmed. 
+
+10. Create requirements.txt
+    pip freeze > requirements.txt
+
+11. set-up the templates directory
+    > mkdir templates
+    > mkdir templates/allauth
+
+12. Commit chnages to git
