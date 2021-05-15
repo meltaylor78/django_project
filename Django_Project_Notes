@@ -1,0 +1,57 @@
+
+
+Django Set-up.
+1. Set-up new repo in Git pod with Template.
+2. Install django. > pi3 install django
+3 start django project > django-admin startproject project_name . (space dot at the end)
+4. Updated gitignore
+5. Run the server to check it works
+    > python3 manage.py runserver
+6. Update the migarations. 
+    > python3 manage.py migrate
+7. Create a super user.
+    > python3 manage.py createsuperuser
+        username / e-mail / password.
+
+Push to Git.
+
+Set-up Autentication. 
+    Django package - allauth (https://django-allauth.readthedocs.io/en/latest/installation.html)
+
+1. Install package
+ > pip3 install django-allauth==0.41.0 (package used in walkthrougg project)
+
+ 2. From the Allauth site, update the requried data into the settings.py
+    i. AUTHENTICATION_BACKENDS
+    ii. get 'django.template.context_processors.request' if not already in the template
+    iii. Update INSTALLED_APPS
+        'django.contrib.auth',
+        'django.contrib.messages',
+        'django.contrib.sites',
+        'allauth',
+        'allauth.account',
+        'allauth.socialaccount',
+    iv. Add "SITE_ID = 1" under the AUTHENTICATION_BACKENDS section.
+
+3. Update the url.py file
+    > path('accounts/', include('allauth.urls')), (new path)
+    > imprort include
+
+4. Run: migrage
+
+5. Launch the site. add /admin to the url and log in with the super user ID. 
+
+6. After logging in, got to sites.
+    Update the domain to project_name.example.com
+        chnage display name to project_ name (critical for socail media auth)
+
+7 Add addtional lines to settings.py    
+    MAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  (sends confirmation mauls to console)
+
+    ACCOUNT_AUTHENTICATION_METHOD = 'username_email'        (allow autentication with e-mail or userIDs)
+    ACCOUNT_EMAIL_REQUIRED = True
+    ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+    ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+    ACCOUNT_USERNAME_MIN_LENGTH = 4
+    LOGIN_URL = '/accounts/login/'
+    LOGIN_REDIRECT_URL = '/'
