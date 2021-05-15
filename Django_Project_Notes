@@ -99,11 +99,28 @@ _____________________
     5. Push to git.
 
 ____________________________________________________________________________________________________________
-
+Create an App (Home App)
 _____________________
-
+> python3 manage.py startapp home
 ____________________________________________________________________________________________________________
+1. Within the home app folder, 
+    create a templates folder, 
+        with home folder in it 
+            and an indxe.html file in there
+    /home/template/home/indxe.html
 
+2. add the block contente to the index.html
+
+3. updated views.py with a view for the index.html page.
+
+4. create a new urls.py file in the home app. 
+    use the project level urls.py file to copy the boilerplate details. 
+
+5 Update the urls file in the home app.
+    update the project level urls.py file with the home app link. 
+
+6. in settins, add the home app to installed apps.
+7. add the templates to the templates section if the file.  (import os)
 _____________________
 
 ____________________________________________________________________________________________________________
