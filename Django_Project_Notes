@@ -70,3 +70,28 @@ Set-up Autentication.
     > mkdir templates/allauth
 
 12. Commit chnages to git
+
+Set-up for Custom Front end 
+
+1. Create a copy of the all auth templates in our templates directory.
+    templates/allauth
+    > cp -r ../.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth
+    remove any templates, not being customised, so they default back to the allauth templates,
+    In this case, remove openid & tests
+
+2. Create a base.html template in the templates level folder. 
+
+3. Get a template from bootstrap for the base.html file. 
+        https://getbootstrap.com/docs/4.4/getting-started/introduction/#starter-template
+    Add:
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    Removed unnecessary comments. 
+
+    move scripts to the top of the file. 
+
+    add {% load static %} to the top of the base.html file. 
+
+4. Add wrappers to the content in the template {%  %} - see file for details. 
+
+5. Push to git.
+
