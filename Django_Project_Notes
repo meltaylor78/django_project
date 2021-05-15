@@ -102,7 +102,7 @@ ________________________________________________________________________________
 Create an App (Home App)
 _____________________
 > python3 manage.py startapp home
-____________________________________________________________________________________________________________
+
 1. Within the home app folder, 
     create a templates folder, 
         with home folder in it 
@@ -121,8 +121,17 @@ ________________________________________________________________________________
 
 6. in settins, add the home app to installed apps.
 7. add the templates to the templates section if the file.  (import os)
+____________________________________________________________________________________________________________
+Settin up Static URLs in settinsg.py
 _____________________
+1. In the settings.py file. 
+add (at the end of the file)
+    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+2. update the project level URLs. 
 ____________________________________________________________________________________________________________
 
 _____________________
