@@ -1,0 +1,17 @@
+
+Create and App:
+    > python3 manage.py startapp app_name
+
+    Note : after creating a new app, it needs to be added to the install apps in setting.py.
+
+Test Create Migrations (dry run)
+    > python3 manage.py makemigrations --dry-run
+
+Create  Migrations
+    > python3 manage.py makemigrations --dry-run
+
+Test Migrations - Plan (test it)
+    > python3 manage.py migrate --plan
+
+Run Migrations
+    > python3 manage.py migrate  (note you should specifi the app name to avoid migrating other apps)
