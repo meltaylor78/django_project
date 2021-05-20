@@ -1,11 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
-
-def view_bag(request):
-    """ A view to render the bag contents page """
-
-    return render(request, 'bag/bag.html')
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -30,4 +22,3 @@ def add_to_bag(request, item_id):
     request.session['bag'] = bag
     print(request.session['bag'])
     return redirect(redirect_url)
-    
