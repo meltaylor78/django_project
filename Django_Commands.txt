@@ -15,3 +15,30 @@ Test Migrations - Plan (test it)
 
 Run Migrations
     > python3 manage.py migrate  (note you should specifi the app name to avoid migrating other apps)
+
+Commands for Managing Content in the DB. 
+    > python3 manage.py shell
+    Can be used to get into a terminal and run python code. 
+    You can import any of the functions from the project.
+
+Example. 
+    from products.models import products    // Import the products
+
+    kdbb = ['kitchen_dining', bed_bath] // var with non-clothes items
+
+    clothes = Product.objects.exclude(category_name=kdbb) // makes a list of clothes in the DB by excluding kithcing_dining & bed_bath categories
+
+    clothes.count()  // prints a count of the products in the clothes category created above. 
+
+    Loop to updated the clothes to set the has_size field to True
+
+       for item in clotes:
+           item.has_sizes = True
+           item.save()
+    updates all the items in clothes to set the flag to True,
+
+    To verifiy 
+
+    Product.objects.filter(has_sizes=True) // get a list of the products has_sizes set to true
+    Product.objects.filter(has_sizes=True).count() // get a count of the products that has_sizes set to true
+ exit // to exit the shell
