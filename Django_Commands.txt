@@ -8,7 +8,7 @@ Test Create Migrations (dry run)
     > python3 manage.py makemigrations --dry-run
 
 Create  Migrations
-    > python3 manage.py makemigrations --dry-run
+    > python3 manage.py makemigrations
 
 Test Migrations - Plan (test it)
     > python3 manage.py migrate --plan
@@ -22,17 +22,17 @@ Commands for Managing Content in the DB.
     You can import any of the functions from the project.
 
 Example. 
-    from products.models import products    // Import the products
+    from products.models import Product    // Import the products
 
-    kdbb = ['kitchen_dining', bed_bath] // var with non-clothes items
+    kdbb = ['kitchen_dining', 'bed_bath'] // var with non-clothes items
 
-    clothes = Product.objects.exclude(category_name=kdbb) // makes a list of clothes in the DB by excluding kithcing_dining & bed_bath categories
+    clothes = Product.objects.exclude(category__name__in=kdbb) // makes a list of clothes in the DB by excluding kithcing_dining & bed_bath categories
 
     clothes.count()  // prints a count of the products in the clothes category created above. 
 
     Loop to updated the clothes to set the has_size field to True
 
-       for item in clotes:
+       for item in clothes:
            item.has_sizes = True
            item.save()
     updates all the items in clothes to set the flag to True,
@@ -42,3 +42,8 @@ Example.
     Product.objects.filter(has_sizes=True) // get a list of the products has_sizes set to true
     Product.objects.filter(has_sizes=True).count() // get a count of the products that has_sizes set to true
  exit // to exit the shell
+
+ Load Data to Django DB. 
+    From a Fixtures folder. In Json format.
+
+    > manage.py loaddata <fixturename>, where <fixturename> is the name of the fixture file you’ve created. 
