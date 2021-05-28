@@ -47,3 +47,17 @@ Example.
     From a Fixtures folder. In Json format.
 
     > manage.py loaddata <fixturename>, where <fixturename> is the name of the fixture file you’ve created. 
+
+Cripspy Forms 
+    > pip3 install django-crispy-forms   (add to installed apps in stettings.py)
+
+    Updated settins.py to tell it which template to use. 
+
+    CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+    Still in settings.py, add the requirments under content processors
+
+    'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ],
