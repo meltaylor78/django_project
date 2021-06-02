@@ -61,3 +61,6 @@ Cripspy Forms
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
             ],
+    
+Stripe Payments
+    > pip3 install stripe
