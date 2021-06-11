@@ -3,7 +3,7 @@ ________________________________________________________________________________
 Django Set-up.
 _____________________
     1. Set-up new repo in Git pod with Template.
-    2. Install django. > pi3 install django
+    2. Install django. > pip3 install django
     3 start django project > django-admin startproject project_name . (space dot at the end)
     4. Updated gitignore
     5. Run the server to check it works

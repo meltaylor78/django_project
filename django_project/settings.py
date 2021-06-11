@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-r_m73lo=5v^zb7g@&&cue%$6dv%h@=pt62f8+_cdntob5vredh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -172,5 +172,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'usd'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51IxybJLRigk8tGyAcdkuNWFTwyq4KVPUaWQj0FdRmlb6Go1B1KOYqyq4o4ji1uNDAzHZkSrulKzoNErSkp9DU6WH001D7B3PP4')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51IxybJLRigk8tGyAnahgWwOiS74Ai93ngA4zuhZ7DcaKN2n8n9AixglueZmNckTbadUHHNzjuP8vPBYk9nu0S0io00GXpr6MHp')
