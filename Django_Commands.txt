@@ -64,3 +64,15 @@ Cripspy Forms
     
 Stripe Payments
     > pip3 install stripe
+
+Django Countries Packages
+    > pip3 install django-countrie
+
+Add the country to the models.py with,
+    from django_countries.fields import CountryField
+
+In models.py set-up the form to use the country fields list 
+    country = CountryField(blank_label= 'County *f', null=False, blank=False)
+
+    Note: Migarate the changes. 
+
