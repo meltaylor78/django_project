@@ -76,3 +76,25 @@ In models.py set-up the form to use the country fields list
 
     Note: Migarate the changes. 
 
+Setting Up Heroku.
+    Create new app.
+    Enable postgres Db in Heroku (under settingsa)
+
+In gitod install;
+    > pip3 install dj_database_url
+    > pip3 install psycopg2-binary
+Freeze the requirmemnts..
+    > pip3 freeze requirements.txt
+
+Import in the settings file 
+ > import dj_database_url
+
+Comment out the default DB information and updated with;
+
+DATABASE = {
+    'default': dj_database_url.parse('get this url from the settings section in Heroku')
+    }
+
+Migrate to the new DB, 
+    > python3 manage.py showmigrations (to see the migrations)
+    > python3 manage.py showmigrations  (to migrate the DB)
