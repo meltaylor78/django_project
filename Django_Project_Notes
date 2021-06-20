@@ -5,7 +5,7 @@ _____________________
     1. Set-up new repo in Git pod with Template.
     2. Install django. > pip3 install django
     3 start django project > django-admin startproject project_name . (space dot at the end)
-    4. Updated gitignore
+    4. Updated gi
     5. Run the server to check it works
         > python3 manage.py runserver
     6. Update the migarations. 
