@@ -114,3 +114,9 @@ Create a Procfile (no extension)
 
 Add the heroku link to the settings file as an allowed host
     ALLOWED_HOSTS = ['django-walkthrough-project.herokuapp.com' 'localhost']
+
+On the Heroku App. 
+    Go to the deploy tab.
+    add the Git repo. 
+    Set to auto deploy  
+    then deploy (bottom of the page)
