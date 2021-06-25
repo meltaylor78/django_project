@@ -130,3 +130,10 @@ Updated settings file as:
     SECRET_KEY = os.environ.get('SECRET_KEY', '')
 and set-up Debug as ;
     DEBUG = 'DEVELOPMENT' in os.environ
+
+Linting Errors:
+    Check all files for erros.
+    > python3 -m flake8
+
+Prints list of issues to the console. Ctrl and click to jumt to the error in the file. 
+
